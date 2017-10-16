@@ -26,10 +26,10 @@
     </md-card>
   </div>
 
-<div fxFlex *ngIf="dish">
+<div fxFlex="40" *ngIf="dish">
 <h1>Comments</h1>
 <md-list >
-  <md-list-item *ngFor="let message of dish.comments">
+  <md-list-item *ngFor="let message of dish.comment">
     <h3 mdLine> {{message.comment}} </h3>
     <p mdLine>{{message.rating}}</p>
     <p mdLine> -- {{message.author}} {{ message.date | date:'medium' }}</p>
@@ -37,4 +37,3 @@
   </md-list-item>
 </md-list>
 </div>
-
